@@ -1,5 +1,69 @@
+html {
+  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto Mono", monospace;
+}
 body {
   background-color: slategray;
+  color: white;
+}
+h1 {
+  color: white;
+  font-size: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h4 {
+  font-size: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 90px 0 30px 0;
+}
+input {
+  height: 100%;
+  border: none;
+  border-bottom: 8px solid white;
+  background: none;
+  outline-style: none;
+  color: white;
+  font-size: 80px;
+  margin-bottom: 30px;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+input::placeholder {
+  color: white;
+  font-size: 80px;
+}
+ul {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 30px;
+}
+li > span {
+  margin-right: 10px;
+}
+li button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+}
+.js-weather {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 25px;
+  margin: 10px 20px 0 0;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  text-align: end;
 }
 .form,
 .greetings {
@@ -7,7 +71,8 @@ body {
 }
 
 .showing {
-  display: block;
+  display: flex;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 @keyframes fadeIn {
@@ -24,6 +89,15 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: -2;
   animation: fadeIn 1s linear;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.3);
 }
